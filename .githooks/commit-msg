@@ -1,0 +1,6 @@
+#!/bin/sh
+# Reject commits that carry a Claude co-author trailer.
+if grep -qiE '^co-authored-by:.*claude' "$1"; then
+  echo "commit-msg: remove the 'Co-Authored-By: Claude' line and commit again." >&2
+  exit 1
+fi

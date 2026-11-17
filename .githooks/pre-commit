@@ -1,0 +1,24 @@
+#!/bin/sh
+# Block commits that add secrets, PII/PHI-looking data, or files that must never be committed.
+root=$(git rev-parse --show-toplevel)
+scan="$root/.githooks/scan.sh"
+fail=0
+
+files=$(git diff --cached --name-only --diff-filter=ACMR)
+while IFS= read -r f; do
+  [ -z "$f" ] && continue
+  case "$f" in
+    *.example|.githooks/scan.sh|*package-lock.json) continue ;;
+    .env|*/.env|.env.*|*/.env.*|*appsettings.Production.json|*.pem|*.pfx|*.p12|*.key|*.bak|*.mdf|*.ldf)
+      echo "Blocked file (never commit this): $f" >&2; fail=1; continue ;;
+  esac
+  out=$(git diff --cached -U0 --no-color -- "$f" | grep '^+' | grep -v '^+++' | sed 's/^+//' | sh "$scan")
+  if [ $? -ne 0 ]; then echo "Possible secret or PII/PHI in $f:" >&2; echo "$out" >&2; fail=1; fi
+done <<EOF
+$files
+EOF
+
+if [ "$fail" -ne 0 ]; then
+  echo "Commit blocked. Remove the data, or add 'scan:allow' to a line that is a false positive." >&2
+  exit 1
+fi

@@ -1,0 +1,11 @@
+:root { --brand: #4f46e5; --brand-dark: #3730a3; }
+body { background: #f4f5fb; }
+.navbar-brand-bar { background: linear-gradient(90deg, var(--brand-dark), var(--brand)); }
+.btn-brand {
+  --bs-btn-bg: var(--brand); --bs-btn-border-color: var(--brand); --bs-btn-color: #fff;
+  --bs-btn-hover-bg: var(--brand-dark); --bs-btn-hover-border-color: var(--brand-dark); --bs-btn-hover-color: #fff;
+  --bs-btn-disabled-bg: var(--brand); --bs-btn-disabled-border-color: var(--brand);
+}
+.stat-card { border: 0; border-left: 4px solid var(--stat, var(--brand)); }
+.card { border: 0; box-shadow: 0 1px 3px rgba(16, 24, 40, .08); }
+th { font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; color: #6b7280; }
