@@ -1,0 +1,11 @@
+Id,Title,Description,Status,Priority,CreatedAt,RequesterName,RequesterEmail,RequesterPhone,RequesterSSN,RequesterDOB,DataNote
+1,VPN keeps disconnecting,"Drops every hour for remote staff, reported by Alicia Moreno",Open,High,2026-11-10T08:15:00Z,Alicia Moreno,alicia.moreno@example.com,+1 555-0101,987-65-4320,1985-03-14,synthetic scan:allow
+2,Password reset email not arriving,Reset link never reaches the inbox,InProgress,Medium,2026-11-10T09:40:00Z,Daniel Okafor,daniel.okafor@example.com,+1 555-0102,987-65-4321,1990-07-02,synthetic scan:allow
+3,Request new monitor,Dual-screen setup for the design team,Closed,Low,2026-11-11T11:05:00Z,Priya Nair,priya.nair@example.com,+1 555-0103,987-65-4322,1988-11-29,synthetic scan:allow
+4,Printer on floor 3 offline,Shows as offline since the firmware update,Open,Medium,2026-11-11T14:22:00Z,Marcus Lindqvist,marcus.lindqvist@example.com,+1 555-0104,987-65-4323,1979-01-21,synthetic scan:allow
+5,Cannot access shared drive,"Access denied after moving to the finance team, needs group added",InProgress,High,2026-11-12T07:55:00Z,Sofia Bianchi,sofia.bianchi@example.com,+1 555-0105,987-65-4324,1993-05-08,synthetic scan:allow
+6,Laptop battery drains quickly,Lasts under an hour on a full charge,Open,Medium,2026-11-12T10:30:00Z,Tomasz Kowalski,tomasz.kowalski@example.com,+1 555-0106,987-65-4325,1982-09-17,synthetic scan:allow
+7,Install Visual Studio,Needs the Enterprise edition for the API project,Closed,Low,2026-11-13T09:10:00Z,Hannah Park,hannah.park@example.com,+1 555-0107,987-65-4326,1995-12-03,synthetic scan:allow
+8,Email signature not updating,New title missing from outgoing mail,Closed,Low,2026-11-13T15:45:00Z,Omar Haddad,omar.haddad@example.com,+1 555-0108,987-65-4327,1987-04-26,synthetic scan:allow
+9,Badge not opening server room,Badge works on other doors but not the server room,InProgress,High,2026-11-14T08:05:00Z,Grace Mbeki,grace.mbeki@example.com,+1 555-0109,987-65-4328,1991-08-11,synthetic scan:allow
+10,Wi-Fi slow in meeting room B,"Speeds under 2 Mbps during meetings, several users affected",Open,High,2026-11-14T13:20:00Z,Lucas Ferreira,lucas.ferreira@example.com,+1 555-0110,987-65-4329,1984-02-19,synthetic scan:allow
